@@ -1,0 +1,5 @@
+ID;name;role;authenticatedAccess
+e0a3fca1-f119-40c5-9ec5-436d6d73f3a1;Admin;Committee Administrator;true
+a8eb1a24-8685-483e-bb27-76090907857c;Manager;Reporting Manager;true
+954e7144-03ec-4d70-b126-0b611d21838c;User1;Member;true
+f1248ec4-af29-48e3-956d-43ff84085318;User2;Member;true

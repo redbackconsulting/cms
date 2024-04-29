@@ -1,0 +1,13 @@
+ID;name;role;committee_ID;meeting_ID
+8ad17839-7f6e-484f-8a17-d817ba59ea01;John Doe;Chairperson;b8976e6e-4377-455b-bec9-e0786dd78971;
+976df5cb-d7ce-47dd-bc2f-8536c6416b20;Jane Smith;Meeting Contact Person;b8976e6e-4377-455b-bec9-e0786dd78971;
+016ca8f5-0641-496a-b53c-fd7e39d36a23;John Doe;Chairperson;87166f8d-2827-46d7-8868-0c8ca77cfa43;
+13f57ee0-7f95-4478-bff0-909bf3ae2327;Jane Smith;Meeting Contact Person;87166f8d-2827-46d7-8868-0c8ca77cfa43;
+ff6cf567-8341-434a-b62f-a31b50d9b7c3;Jane Smith;Committee Contact Person;b8976e6e-4377-455b-bec9-e0786dd78971;
+15f6bfb8-f1fc-47c2-a248-781c9d1eac33;Jane Smith;Committee Contact Person;87166f8d-2827-46d7-8868-0c8ca77cfa43;
+ce30c14a-36a4-4a72-907e-7b574449ba61;John Doe;Member;b8976e6e-4377-455b-bec9-e0786dd78971;94922684-5289-40b2-864a-ee138f46c83e
+1a112fe5-38ac-45a2-a032-5a474eb5bee5;Jane Smith;Member;b8976e6e-4377-455b-bec9-e0786dd78971;94922684-5289-40b2-864a-ee138f46c83e
+c60b6225-0efb-40ee-9bc9-ab38c17e3148;John Doe;Member;b8976e6e-4377-455b-bec9-e0786dd78971;cf40133c-68ba-483e-9591-0cec326e658a
+7e6570d2-0bb9-42b5-939b-399a2ea36938;Jane Smith;Member;b8976e6e-4377-455b-bec9-e0786dd78971;cf40133c-68ba-483e-9591-0cec326e658a
+a81493af-376e-474f-992b-47885a60269d;John Doe;Member;87166f8d-2827-46d7-8868-0c8ca77cfa43;365331b7-6dae-4146-a29e-8e89da183f33
+cd2e7a16-9141-4ba5-8510-7228edc54bd2;Jane Smith;Member;87166f8d-2827-46d7-8868-0c8ca77cfa43;365331b7-6dae-4146-a29e-8e89da183f33
