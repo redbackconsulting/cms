@@ -1,3 +1,6 @@
+using { sap.common.CodeList } from '@sap/cds/common';
+
+
 namespace committeeManagement;
 
 entity Committee {
@@ -6,7 +9,7 @@ entity Committee {
   description: String(500);
   startDate: Date;
   endDate: Date;
-  status: String(20);
+  status: Association to Status;
   members: Association to many Member on members.committee = $self;
   meetings: Association to many Meeting on meetings.committee = $self;
 }
@@ -24,7 +27,7 @@ entity Meeting {
   name: String(100) @assert.unique @mandatory;
   startDate: Date;
   endDate: Date;
-  status: String(20);
+  status: Association to Status;
   committee: Association to Committee;
   members: Association to many Member on members.meeting = $self;
 }
@@ -36,3 +39,13 @@ entity User {
   authenticatedAccess: Boolean;
 }
 
+entity Status : CodeList {
+  key code : String enum {
+        new = 'N';
+        in_process = 'I'; 
+        on_hold = 'H'; 
+        approved = 'A'; 
+        rejected = 'R';
+        closed = 'C'; 
+  }
+}

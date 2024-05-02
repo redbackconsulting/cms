@@ -1,3 +1,3 @@
-ID;name;description;startDate;endDate;status
-b8976e6e-4377-455b-bec9-e0786dd78971;Finance Committee;Committee responsible for financial matters;2021-01-01;2021-12-31;Active
-87166f8d-2827-46d7-8868-0c8ca77cfa43;Marketing Committee;Committee responsible for marketing activities;2021-01-01;2021-12-31;Inactive
+ID;name;description;startDate;endDate;status_code
+b8976e6e-4377-455b-bec9-e0786dd78971;Finance Committee;Committee responsible for financial matters;2021-01-01;2021-12-31;N
+87166f8d-2827-46d7-8868-0c8ca77cfa43;Marketing Committee;Committee responsible for marketing activities;2021-01-01;2021-12-31;N
