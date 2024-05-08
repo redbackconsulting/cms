@@ -1,0 +1,6 @@
+ID;name;role;authenticatedAccess
+25241ae9-3fb5-4689-9d58-4841f36d6ec1;Admin;Administrator;true
+61501fa3-7ecb-499a-b32e-e973f1f48712;User;Regular User;true
+d7e94d27-d35d-40ef-8b17-5a5d2da5926c;Guest;Guest User;false
+a2227ed3-e6e5-4bbb-95f8-7f310ce11591;Manager;Manager;true
+d7c5ad1d-874d-496d-84f9-8f38346527f3;Supervisor;Supervisor;true

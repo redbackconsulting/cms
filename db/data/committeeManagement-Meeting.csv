@@ -1,4 +1,1 @@
-ID;name;startDate;endDate;status_code;committee_ID
-94922684-5289-40b2-864a-ee138f46c83e;Finance Committee Meeting 1;2021-01-05;2021-01-05;N;b8976e6e-4377-455b-bec9-e0786dd78971
-cf40133c-68ba-483e-9591-0cec326e658a;Finance Committee Meeting 2;2021-01-12;2021-01-12;N;b8976e6e-4377-455b-bec9-e0786dd78971
-365331b7-6dae-4146-a29e-8e89da183f33;Marketing Committee Meeting 1;2021-01-10;2021-01-10;N;87166f8d-2827-46d7-8868-0c8ca77cfa43
+ID,name,startDate,endDate,status_code,committee_ID

@@ -39,6 +39,18 @@ entity User {
   authenticatedAccess: Boolean;
 }
 
+/*
+entity Status : CodeList {
+  key code : String enum {
+        new = 'N';
+        in_process = 'I'; 
+        on_hold = 'H'; 
+        approved = 'A'; 
+        rejected = 'R';
+        closed = 'C'; 
+  }
+}
+*/
 entity Status : CodeList {
   key code : String enum {
         new = 'N';
