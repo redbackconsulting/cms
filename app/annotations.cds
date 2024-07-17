@@ -9,22 +9,22 @@ annotate committeeManagementSrv.Committee with @UI.DataPoint #startDate: {
   Value: startDate,
   Title: 'Start Date',
 };
-annotate committeeManagementSrv.Committee with @UI.DataPoint #status: {
-  Value: status,
+annotate committeeManagementSrv.Committee with @UI.DataPoint #stat: {
+  Value: stat.descr,
   Title: 'Status',
 };
 annotate committeeManagementSrv.Committee with {
   description @title: 'Description';
   startDate @title: 'Start Date';
   endDate @title: 'End Date';
-  status @title: 'Status'
+  stat @title: 'Status'
 };
 
 annotate committeeManagementSrv.Committee with @UI.LineItem: [
     { $Type: 'UI.DataField', Value: description },
     { $Type: 'UI.DataField', Value: startDate },
     { $Type: 'UI.DataField', Value: endDate },
-    { $Type: 'UI.DataField', Value: status }
+    { $Type: 'UI.DataField', Value: stat_code }
 ];
 
 annotate committeeManagementSrv.Committee with @UI.FieldGroup #Main: {
@@ -32,7 +32,7 @@ annotate committeeManagementSrv.Committee with @UI.FieldGroup #Main: {
     { $Type: 'UI.DataField', Value: description },
     { $Type: 'UI.DataField', Value: startDate },
     { $Type: 'UI.DataField', Value: endDate },
-    { $Type: 'UI.DataField', Value: status }
+    { $Type: 'UI.DataField', Value: stat_code }
   ]
 };
 
@@ -43,7 +43,7 @@ annotate committeeManagementSrv.Committee with {
 
 annotate committeeManagementSrv.Committee with @UI.HeaderFacets: [
  { $Type : 'UI.ReferenceFacet', Target : '@UI.DataPoint#startDate' },
- { $Type : 'UI.ReferenceFacet', Target : '@UI.DataPoint#status' }
+ { $Type : 'UI.ReferenceFacet', Target : '@UI.DataPoint#stat' }
 ];
 
 annotate committeeManagementSrv.Committee with @UI.Facets: [

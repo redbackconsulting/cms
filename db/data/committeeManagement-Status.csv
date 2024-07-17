@@ -1,1 +1,7 @@
-code,name,descr
+code;descr
+N;New
+I;In Process
+H;On Hold
+A;Approved
+R;Rejected
+C;Closed

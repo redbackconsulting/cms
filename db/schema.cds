@@ -9,7 +9,7 @@ entity Committee {
   description: String(500);
   startDate: Date;
   endDate: Date;
-  status: Association to Status;
+  stat: Association to Status;
   members: Association to many Member on members.committee = $self;
   meetings: Association to many Meeting on meetings.committee = $self;
 }
@@ -52,12 +52,5 @@ entity Status : CodeList {
 }
 */
 entity Status : CodeList {
-  key code : String enum {
-        new = 'N';
-        in_process = 'I'; 
-        on_hold = 'H'; 
-        approved = 'A'; 
-        rejected = 'R';
-        closed = 'C'; 
-  }
+  key code : String(1);
 }
