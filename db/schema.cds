@@ -10,7 +10,9 @@ entity Committee {
   startDate: Date;
   endDate: Date;
   stat: Association to Status;
-  members: Association to many Member on members.committee = $self;
+//  members: Association to many Member on members.committee = $self;
+  members: Association to many CommitteeMembers on members.committee = $self;
+
   meetings: Association to many Meeting on meetings.committee = $self;
 }
 
@@ -20,6 +22,12 @@ entity Member {
   role: String(50);
   committee: Association to Committee;
   meeting: Association to Meeting;
+}
+
+entity CommitteeMembers {
+    key committee : Association to Committee;
+    key member : Association to Member;
+    role : String(50);
 }
 
 entity Meeting {

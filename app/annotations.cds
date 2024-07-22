@@ -54,6 +54,18 @@ annotate committeeManagementSrv.Committee with @UI.SelectionFields: [
   name
 ];
 
+annotate committeeManagementSrv.CommitteeMembers with @UI.HeaderInfo: {TypeName:'Committee Member',TypeNamePlural:'Committee Members',Title:{Value:committee.description}};
+/*
+annotate committeeManagementSrv.CommitteeMembers with {
+  committee @UI.Hidden @Common.Text: { $value: committee.description, ![@UI.TextArrangement]: #TextOnly }
+
+}; */
+annotate committeeManagementSrv.CommitteeMembers with @UI.LineItem: [
+    { $Type: 'UI.DataField', Value: role },
+    { $Type: 'UI.DataField', Label: 'Committee', Value: committee_ID },
+    { $Type: 'UI.DataField', Label: 'Member', Value: member.name }
+];
+
 annotate committeeManagementSrv.Member with @UI.HeaderInfo: { TypeName: 'Member', TypeNamePlural: 'Members', Title: { Value: name } };
 annotate committeeManagementSrv.Member with {
   ID @UI.Hidden @Common.Text: { $value: name, ![@UI.TextArrangement]: #TextOnly }
