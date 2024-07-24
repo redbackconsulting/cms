@@ -13,6 +13,8 @@ service committeeManagementSrv
   @odata.draft.enabled
   entity Meeting as projection on committeeManagement.Meeting;
   @odata.draft.enabled
+  entity MeetingMembers as projection on committeeManagement.MeetingMembers;  
+  @odata.draft.enabled
   entity User as projection on committeeManagement.User;
   @odata.draft.enabled
   entity Status as projection on committeeManagement.Status;

@@ -142,14 +142,16 @@ annotate committeeManagementSrv.Member with {
 annotate committeeManagementSrv.Member with @UI.LineItem: [
     { $Type: 'UI.DataField', Value: role },
     { $Type: 'UI.DataField', Label: 'Committee', Value: committee_ID },
-    { $Type: 'UI.DataField', Label: 'Meeting', Value: meeting_ID }
+    { $Type: 'UI.DataField', Label: 'Meeting', Value: meeting_ID },
+    { $Type: 'UI.DataField', Label: 'Rate', Value: rate }    
 ];
 
 annotate committeeManagementSrv.Member with @UI.FieldGroup #Main: {
   $Type: 'UI.FieldGroupType', Data: [
     { $Type: 'UI.DataField', Value: role },
     { $Type: 'UI.DataField', Label: 'Committee', Value: committee_ID },
-    { $Type: 'UI.DataField', Label: 'Meeting', Value: meeting_ID }
+    { $Type: 'UI.DataField', Label: 'Meeting', Value: meeting_ID },
+    { $Type: 'UI.DataField', Label: 'Rate', Value: rate }    
   ]
 };
 
@@ -208,7 +210,7 @@ annotate committeeManagementSrv.Meeting with {
       },
       {
         $Type            : 'Common.ValueListParameterDisplayOnly',
-        ValueListProperty: 'status'
+        ValueListProperty: 'stat_code'
       },
     ],
   }
@@ -218,7 +220,7 @@ annotate committeeManagementSrv.Meeting with @UI.DataPoint #startDate: {
   Title: 'Start Date',
 };
 annotate committeeManagementSrv.Meeting with @UI.DataPoint #status: {
-  Value: status,
+  Value: status.descr,
   Title: 'Status',
 };
 annotate committeeManagementSrv.Meeting with {
@@ -230,7 +232,7 @@ annotate committeeManagementSrv.Meeting with {
 annotate committeeManagementSrv.Meeting with @UI.LineItem: [
     { $Type: 'UI.DataField', Value: startDate },
     { $Type: 'UI.DataField', Value: endDate },
-    { $Type: 'UI.DataField', Value: status },
+    { $Type: 'UI.DataField', Value: status_code },
     { $Type: 'UI.DataField', Label: 'Committee', Value: committee_ID }
 ];
 
@@ -238,7 +240,7 @@ annotate committeeManagementSrv.Meeting with @UI.FieldGroup #Main: {
   $Type: 'UI.FieldGroupType', Data: [
     { $Type: 'UI.DataField', Value: startDate },
     { $Type: 'UI.DataField', Value: endDate },
-    { $Type: 'UI.DataField', Value: status },
+    { $Type: 'UI.DataField', Value: status.descr },
     { $Type: 'UI.DataField', Label: 'Committee', Value: committee_ID }
   ]
 };
@@ -263,6 +265,15 @@ annotate committeeManagementSrv.Meeting with @UI.Facets: [
 
 annotate committeeManagementSrv.Meeting with @UI.SelectionFields: [
   committee_ID
+];
+
+annotate committeeManagementSrv.MeetingMembers with @UI.HeaderInfo: {TypeName:'Meeting Member',TypeNamePlural:'Meeting Members',Title:{Value:meeting.name}};
+annotate committeeManagementSrv.MeetingMembers with @UI.LineItem: [
+    { $Type: 'UI.DataField', Value: role },
+    { $Type: 'UI.DataField', Label: 'Meeting', Value: meeting_ID },
+    { $Type: 'UI.DataField', Label: 'Member', Value: member.name },
+    { $Type: 'UI.DataField', Label: 'Time Spent', Value: timeSpent },
+    { $Type: 'UI.DataField', Label: 'Cost', Value: cost }        
 ];
 
 annotate committeeManagementSrv.User with @UI.HeaderInfo: { TypeName: 'User', TypeNamePlural: 'Users', Title: { Value: name } };
